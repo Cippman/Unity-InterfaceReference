@@ -9,7 +9,7 @@ using Object = UnityEngine.Object;
 namespace CippSharp
 {
     /// <summary>
-    /// Create a custom serializable class that derives from this class to reference an interface of type T
+    /// Create a custom serializable class that inherit from this class to reference an interface of type I
     /// I must be an interface.
     /// Useful to hold reference to components/objects of type t;
     /// </summary>

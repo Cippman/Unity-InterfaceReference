@@ -100,6 +100,11 @@ namespace CippSharpEditor.Interfaces
                 {
                     foreach (var requiredType in requiredTypes)
                     {
+                        if (requiredType == null)
+                        {
+                            continue;
+                        }
+                        
                         comp = gameObject.GetComponent(requiredType);
                         if (comp != null)
                         {

@@ -6,7 +6,7 @@ using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace CippSharp
+namespace CippSharp.Interfaces
 {
     /// <summary>
     /// Create a custom serializable class that inherit from this class to reference an interface of type I
@@ -19,7 +19,7 @@ namespace CippSharp
     {
         private const string None = "None";
      
-        [SerializeField, HideInInspector] private string name = null;
+        [SerializeField, NotEditable] private string name = null;
         
         /// <summary>
         /// Exposed field assignable from inspector
@@ -34,30 +34,36 @@ namespace CippSharp
             get { return target; }
             set
             {
-                if (value == null)
-                {
-                    target = null;
-                    name = None;
-                    return;
-                }
-                
-                if (value is I)
-                {
-                    target = value;
-                }
-                else
-                {
-                    target = null;
-                    Debug.LogWarning(string.Format("You should set an Object that implements <i>{0}</i>.", typeof(I).FullName));
-                }
-                
-                if (Target != null)
-                {
-                    name = string.Format("{0} ({1}).", Target.name, typeof(I).Name);
-                }
+                SetTarget(value);
+                SetName(target);
             }
         }
 
+        private void SetTarget(Object value)
+        {
+            if (value == null)
+            {
+                target = null;
+                return;
+            }
+                
+            if (value is I)
+            {
+                target = value;
+            }
+            else
+            {
+                target = null;
+                Debug.LogWarning(string.Format("You should set an Object that implements <i>{0}</i>.", typeof(I).FullName));
+            } 
+        }
+
+        private void SetName(Object obj)
+        {
+            name = obj != null ? string.Format("{0} ({1})", obj.name, typeof(I).Name) : None;
+        }
+        
+        
         /// <summary>
         /// The interface.
         /// </summary>
@@ -69,11 +75,18 @@ namespace CippSharp
             }
         }
 
+        #region ISerializationCallbackReceiver Implementation
+        
         public void OnBeforeSerialize()
+        {
+            CheckTarget();
+            SetName(Target);
+        }
+
+        private void CheckTarget()
         {
             if (Target == null)
             {
-                name = None;
                 return;
             }
             
@@ -85,7 +98,6 @@ namespace CippSharp
                 
                 if (Target == null)
                 {
-                    name = None;
                     Debug.LogWarning(string.Format("You must assign a gameObject that have at least one component of type <i>{0}</i>.", typeof(I).FullName));
                     return;
                 }
@@ -97,26 +109,25 @@ namespace CippSharp
                 target = null;
                 Debug.LogWarning(string.Format("You must assign an Object that implements <i>{0}</i>.", typeof(I).FullName));
             }
-
-            if (Target != null)
-            {
-                name = string.Format("{0} ({1}).", Target.name, typeof(I).Name);
-            }
-            else
-            {
-                name = None;
-            }
         }
 
         public void OnAfterDeserialize()
         {
             
         }
+        
+        #endregion
+        
 
+
+        #region Operators
+        
         public static implicit operator I(InterfaceReference<I> interfaceReference)
         {
             return interfaceReference.Interface;
         }
+        
+        #endregion
 
         public override string ToString()
         {

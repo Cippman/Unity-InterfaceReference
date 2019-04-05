@@ -1,5 +1,6 @@
-﻿
-using UnityEngine;
+﻿/*
+ *  Author: Alessandro Salani (Cippman)
+ */
 
 namespace CippSharp.Interfaces.Examples
 {

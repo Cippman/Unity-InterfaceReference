@@ -117,8 +117,6 @@ namespace CippSharp.Interfaces
         }
         
         #endregion
-        
-
 
         #region Operators
         

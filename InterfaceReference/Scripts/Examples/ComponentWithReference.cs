@@ -1,12 +1,6 @@
-﻿//======= Copyright (c) Immerxive Srl, All rights reserved. ===================
-//
-// Author: Alessandro Salani (Cippo)
-//
-// Purpose: 
-//
-// Notes:
-//
-//=============================================================================
+﻿/*
+ *  Author: Alessandro Salani (Cippman)
+ */
 
 using System;
 using UnityEngine;

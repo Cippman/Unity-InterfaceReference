@@ -1,9 +1,19 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace CippSharp.Interfaces.Examples
 {
     public class ExposedInterfaceReference : MonoBehaviour
     {
-        [SerializeField, Expose] public ICustomInterfaceExample customInterfaceExample = null;
+        [Serializable]
+        public class CustomInterfaceReference : InterfaceReference<ICustomInterfaceExample>
+        {
+			
+        }
+        
+        		
+        [Header("Interface:")]
+        [Expose] public CustomInterfaceReference customInterfaceReference = new CustomInterfaceReference();
+
     }
 }

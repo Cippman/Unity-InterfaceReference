@@ -6,13 +6,12 @@ using System;
 using CippSharp.Interfaces;
 using UnityEditor;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace CippSharp.Interfaces
 {
-     public class ExposeAttribute : Attribute
+     public class ExposeAttribute : PropertyAttribute
      {
-            ExposedReference<>
+		
      }
 }
 
@@ -26,13 +25,7 @@ namespace CippSharpEditor.Interfaces
     [CustomPropertyDrawer(typeof(ExposeAttribute))]
     public class ExposeAttributeDrawer : PropertyDrawer
     {
-        private object target = null;
-        private readonly Object nullObject = null;
-        private Object TargetObject
-        {
-            get { return target != null ? (Object)target : nullObject; }
-            set { target = value; }
-        }
+        private SerializedProperty ser_target = null;
         
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
@@ -42,35 +35,32 @@ namespace CippSharpEditor.Interfaces
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             ExposeAttribute exposeAttribute = attribute as ExposeAttribute;
-            Type fieldType = fieldInfo.FieldType;
-            if (property.propertyType == SerializedPropertyType.Generic && fieldType.IsInterface)
+			if (property.propertyType == SerializedPropertyType.Generic)
             {
-                if (exposeAttribute != null)
+                if (ser_target == null)
                 {
-                    target = fieldInfo.GetValue(property.serializedObject.targetObject);
-                    if (target == null)
-                    {    
-                        TargetObject = EditorGUI.ObjectField(position, TargetObject, typeof(Object), true);
-                        fieldInfo.SetValue(property.serializedObject.targetObject, TargetObject);
-                    }
-                    else if (target is Object)
+                    ser_target = property.FindPropertyRelative("target");
+                }
+
+                if (ser_target != null)
+                {
+                    if (exposeAttribute != null)
                     {
-                        TargetObject = EditorGUI.ObjectField(position, TargetObject, typeof(Object), true);
-                        fieldInfo.SetValue(property.serializedObject.targetObject, TargetObject);
+                        EditorGUIUtils.DrawProperty(position, ser_target, label);
                     }
                     else
                     {
-                        //Not implemented for interfaces that aren't also of type Object.
+                        Debug.LogError("Failed to assign the attribute.");
                     }
                 }
                 else
                 {
-                    Debug.LogError("Failed to assign the attribute.");
+                    Debug.LogWarning("Expose Attribute supports only Interface Reference fields. (Or fields with a sub-"+typeof(SerializedProperty).Name+" with name <i>target</i>");
                 }
             }
             else
             {
-                Debug.LogWarning("Expose Attribute supports only Interface Reference fields.");
+                Debug.LogWarning("Serialized Property is not of Generic type.");
             }
         }
     }

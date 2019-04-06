@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 793930335}
   - component: {fileID: 793930334}
   m_Layer: 0
-  m_Name: Component with Type Filter
+  m_Name: Component with Type Filter Attribute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,6 +404,18 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
+    - {fileID: 793930333}
+    ActiveGameObject: {fileID: 793930333}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
     - {fileID: 122467412}
     ActiveGameObject: {fileID: 122467412}
     GUIDsList: []
@@ -418,18 +430,6 @@ MonoBehaviour:
     list:
     - {fileID: 1824733537}
     ActiveGameObject: {fileID: 1824733537}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 793930333}
-    ActiveGameObject: {fileID: 793930333}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 1968288555}
   - component: {fileID: 1968288554}
   m_Layer: 0
-  m_Name: Component with Exposed Reference
+  m_Name: Component with Expose Attribute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,6 +623,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b9862a7a50ed478a95fe23ae1a3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customInterfaceReference:
+    name: Component that Implements Interface (ICustomInterfaceExample)
+    target: {fileID: 1308923936}
 --- !u!4 &1968288555
 Transform:
   m_ObjectHideFlags: 0

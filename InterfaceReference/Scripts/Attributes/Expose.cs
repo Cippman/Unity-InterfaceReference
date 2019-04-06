@@ -2,7 +2,6 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
-using System;
 using CippSharp.Interfaces;
 using UnityEditor;
 using UnityEngine;

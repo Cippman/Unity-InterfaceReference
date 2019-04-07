@@ -3,8 +3,11 @@
  */
 
 using CippSharp.Interfaces;
-using UnityEditor;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace CippSharp.Interfaces
 {
@@ -19,7 +22,7 @@ namespace CippSharp.Interfaces
 namespace CippSharpEditor.Interfaces
 {
     /// <summary>
-    /// Custom drawer of TypeFilterAttribute. 
+    /// Custom drawer of ExposeAttribute.
     /// </summary>
     [CustomPropertyDrawer(typeof(ExposeAttribute))]
     public class ExposeAttributeDrawer : PropertyDrawer

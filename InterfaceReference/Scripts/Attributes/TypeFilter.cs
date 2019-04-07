@@ -7,6 +7,7 @@ using System.Linq;
 using CippSharp.Interfaces;
 using UnityEngine;
 using Object = UnityEngine.Object;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -119,7 +120,7 @@ namespace CippSharpEditor.Interfaces
                 }
                 else
                 {
-                    Debug.LogWarning("You must assign a gameObject that have at one component of the required types that you have specified.");
+                    Debug.LogWarning("You must assign a GameObject that has at least one component of the required types that you have specified.");
                 }
             }
         }

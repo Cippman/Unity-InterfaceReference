@@ -2,7 +2,6 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
-
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;

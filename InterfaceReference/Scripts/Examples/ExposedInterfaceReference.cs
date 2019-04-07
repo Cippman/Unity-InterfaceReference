@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ *  Author: Alessandro Salani (Cippman)
+ */
+
+using System;
 using UnityEngine;
 
 namespace CippSharp.Interfaces.Examples

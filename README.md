@@ -17,14 +17,10 @@ Code:
 ## History: 
 Inspired by ( https://assetstore.unity.com/packages/tools/iunified-12117 / https://forum.unity.com/threads/released-iunified-c-interfaces-for-unity.206988/ ) (an useful asset that I bought years ago) I'd like to give my solution to the question of how to serialize interfaces holded by components (or other objects)? What was the best plug 'n' play workflow/compromises to do this?
 
-This version is completely free and different (as implementation). Just one script to do what I needed.
+This version is completely free and different (as implementation).
+
+## FORUM:
+Link: https://forum.unity.com/threads/repository-interface-reference.672535/
 
 ## Support:
 (if you'd like to) Patreon: https://www.patreon.com/AlessandroSalani
-
-
-
-### Roadmap (unsorted):
-- some examples
-- can I do this with a property attribute and an object?
-- a forum thread?

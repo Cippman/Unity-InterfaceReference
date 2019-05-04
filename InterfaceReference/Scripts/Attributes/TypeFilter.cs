@@ -4,11 +4,11 @@
 
 using System;
 using System.Linq;
-using CippSharp.Interfaces;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 #if UNITY_EDITOR
+using CippSharp.Interfaces;
 using UnityEditor;
 #endif
 

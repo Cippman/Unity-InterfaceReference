@@ -19,7 +19,7 @@ Inspired by ( https://assetstore.unity.com/packages/tools/iunified-12117 / https
 
 This version is completely free and different (as implementation).
 
-## FORUM:
+## Forum:
 Link: https://forum.unity.com/threads/repository-interface-reference.672535/
 
 ## Support:

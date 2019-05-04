@@ -1,4 +1,7 @@
-﻿
+﻿/*
+ *  Author: Alessandro Salani (Cippman)
+ */
+
 using UnityEngine;
 
 namespace CippSharp.Interfaces.Examples

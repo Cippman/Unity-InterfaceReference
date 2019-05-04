@@ -53,7 +53,7 @@ namespace CippSharp.Interfaces
             }
             else
             {
-                target = null;
+                target = null;                
                 Debug.LogWarning(string.Format("You should set an Object that implements <i>{0}</i>.", typeof(I).FullName));
             } 
         }

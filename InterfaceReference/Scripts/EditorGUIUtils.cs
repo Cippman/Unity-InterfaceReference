@@ -38,7 +38,6 @@ namespace CippSharpEditor.Interfaces
             {
                 EditorGUI.PropertyField(rect, property, label, property.hasChildren);
             }
-
             GUI.enabled = guiEnabled;
         }
     }

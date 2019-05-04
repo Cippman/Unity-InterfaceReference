@@ -2,11 +2,10 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
-
-using CippSharp.Interfaces;
 using UnityEngine;
 
 #if UNITY_EDITOR
+using CippSharp.Interfaces;
 using UnityEditor;
 #endif
 

@@ -22,7 +22,7 @@ support scripts and few attributes.
 
 ###  Notes:
 Multiple Components: 
-1) For multiple components with T implementation 
+- For multiple components with T implementation 
 on same gameObject by defult only the first is 
 retrived. To assign another component that is not 
 the first you should open [two inspectors](https://photos.app.goo.gl/Pw8Hq1o3qnCGoica6):

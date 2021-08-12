@@ -2,11 +2,11 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
-using UnityEngine;
 #if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 
-namespace CippSharpEditor.Interfaces
+namespace CippSharp.Core.Interfaces.Editor
 {
     public static class EditorGUIUtils
     {

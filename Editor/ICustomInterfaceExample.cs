@@ -2,7 +2,7 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
-namespace CippSharp.Interfaces.Examples
+namespace CippSharp.Core.Interfaces.Editor.Examples
 {
     public interface ICustomInterfaceExample
     {

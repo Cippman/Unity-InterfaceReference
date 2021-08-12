@@ -6,7 +6,7 @@ using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace CippSharp.Interfaces
+namespace CippSharp.Core.Interfaces
 {
     /// <summary>
     /// Create a custom serializable class that inherit from this class to reference an interface of type I

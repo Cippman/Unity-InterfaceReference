@@ -2,23 +2,28 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
+using System;
 using UnityEngine;
 
 #if UNITY_EDITOR
-using CippSharp.Interfaces;
 using UnityEditor;
 #endif
 
-namespace CippSharp.Interfaces
+namespace CippSharp.Core.Interfaces
 {
-     public class ExposeAttribute : PropertyAttribute
-     {
+    /// <summary>
+    /// Purpose: after declaring a custom Interface Reference you can directly expose the target
+    /// in inspector without have the 'foldout'.
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
+    public class ExposeAttribute : PropertyAttribute
+    {
 		
-     }
+    }
 }
 
 #if UNITY_EDITOR
-namespace CippSharpEditor.Interfaces
+namespace CippSharp.Core.Interfaces.Editor
 {
     /// <summary>
     /// Custom drawer of ExposeAttribute.

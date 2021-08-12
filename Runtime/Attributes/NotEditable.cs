@@ -2,19 +2,20 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
+using System;
 using UnityEngine;
 
 #if UNITY_EDITOR
-using CippSharp.Interfaces;
 using UnityEditor;
 #endif
 
-namespace CippSharp.Interfaces
+namespace CippSharp.Core.Interfaces
 {
 	/// <summary>
 	/// Generic attribute to make a property NotEditable in inspector.
 	/// It doesn't work in inspector's debug view.
 	/// </summary>
+	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
 	public class NotEditableAttribute : PropertyAttribute
 	{
         
@@ -22,7 +23,7 @@ namespace CippSharp.Interfaces
 }
 
 #if UNITY_EDITOR
-namespace CippSharpEditor.Interfaces
+namespace CippSharp.Core.Interfaces.Editor
 {
 	/// <summary>
 	/// Custom drawer of NotEditableAttribute. 

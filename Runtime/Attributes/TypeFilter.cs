@@ -8,15 +8,15 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 
 #if UNITY_EDITOR
-using CippSharp.Interfaces;
 using UnityEditor;
 #endif
 
-namespace CippSharp.Interfaces
+namespace CippSharp.Core.Interfaces
 {
     /// <summary>
     /// Generic attribute to make a property of Object type to filter types.
     /// </summary>
+    [AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
     public class TypeFilterAttribute : PropertyAttribute
     {
         public Type[] types;
@@ -29,7 +29,7 @@ namespace CippSharp.Interfaces
 }
 
 #if UNITY_EDITOR
-namespace CippSharpEditor.Interfaces
+namespace CippSharp.Core.Interfaces.Editor
 {
     /// <summary>
     /// Custom drawer of TypeFilterAttribute. 

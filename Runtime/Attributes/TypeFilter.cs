@@ -2,14 +2,18 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
-using System;
-using System.Linq;
-using UnityEngine;
-using Object = UnityEngine.Object;
-
 #if UNITY_EDITOR
+
+using System;
+#if UNITY_EDITOR
+using System.Linq;
 using UnityEditor;
 #endif
+using UnityEngine;
+#if UNITY_EDITOR
+using Object = UnityEngine.Object;
+#endif
+
 
 namespace CippSharp.Core.Interfaces
 {
@@ -170,4 +174,6 @@ namespace CippSharp.Core.Interfaces.Editor
         }
     }
 }
+#endif
+
 #endif

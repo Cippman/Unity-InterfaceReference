@@ -1,11 +1,9 @@
 {
-    "name": "com.CippSharpCore.Interfaces.Editor",
+    "name": "com.CippSharpCore.Interfaces.Samples",
     "references": [
         "GUID:f59bdebc7b435ab4981d4cf8dcbc1eca"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

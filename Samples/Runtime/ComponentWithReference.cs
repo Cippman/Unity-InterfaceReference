@@ -2,10 +2,11 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
+#if UNITY_EDITOR
 using System;
 using UnityEngine;
 
-namespace CippSharp.Core.Interfaces.Editor.Examples
+namespace CippSharp.Core.Interfaces.Samples
 {
 	public class ComponentWithReference : MonoBehaviour
 	{
@@ -19,4 +20,4 @@ namespace CippSharp.Core.Interfaces.Editor.Examples
 		public CustomInterfaceReference customInterfaceReference = new CustomInterfaceReference();
 	}
 }
-
+#endif

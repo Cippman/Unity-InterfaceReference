@@ -2,11 +2,12 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
-namespace CippSharp.Core.Interfaces.Editor.Examples
+#if UNITY_EDITOR
+namespace CippSharp.Core.Interfaces.Samples
 {
     public interface ICustomInterfaceExample
     {
         
     }
 }
-
+#endif

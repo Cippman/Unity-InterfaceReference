@@ -2,7 +2,6 @@
  *  Author: Alessandro Salani (Cippman)
  */
 
-#if UNITY_EDITOR
 
 using System;
 #if UNITY_EDITOR
@@ -174,6 +173,4 @@ namespace CippSharp.Core.Interfaces.Editor
         }
     }
 }
-#endif
-
 #endif

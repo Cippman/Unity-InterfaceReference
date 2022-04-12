@@ -16,7 +16,7 @@ support scripts and few attributes.
 - Option 1 (readonly) now it supports Unity Package Manager so you can download by copy/paste the git url in 'Package Manager Window + Install From Git'.
   As said this is a readonly solution so you cannot access all files this way.
 - Option 2 (classic) download this repository as .zip; Extract the files; Drag 'n' drop the extracted folder in your unity project (where you prefer).
-- Option 3 (alternative) add this as submodule / separate repo in your project by copy/paste the git url
+- Option 3 (alternative) add this as submodule / separate repo in your project
 - Option 4 (vintage) use the old ".unitypackage"
   
 
@@ -58,4 +58,4 @@ This version is completely free and different (as implementation).
 - [repo](https://github.com/Cippman/Unity-InterfaceReference.git)
 
 ### Support:
-- [patreon](https://www.patreon.com/AlessandroSalani)
+- [tip jar](https://www.amazon.it/photos/share/Gbg3FN0k6pjG6F5Ln3dqQEmwO0u4nSkNIButm3EGtit)

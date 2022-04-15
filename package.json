@@ -1,6 +1,6 @@
 {
   "name": "com.cippsharpcore.interfaces",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "displayName": "CippSharp.Interfaces",
   "description": "Create your custom serializable class that holds the reference to an UnityEngine.Object that implements an interface I.",
   "unity":"2019.4",

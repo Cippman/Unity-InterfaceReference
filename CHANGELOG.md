@@ -1,6 +1,9 @@
 ## Version 1.0.X
 - minor changes and bug fixing
 
+## Version 1.0.6
+- fixed readme.md typo
+
 ## Version 1.0.5
 - updated readme with tip jar (instead of patreon)
 - updated changelog and package.json
